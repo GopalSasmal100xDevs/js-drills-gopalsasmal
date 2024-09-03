@@ -6,6 +6,7 @@ const {
   logTheIndexedPerson,
   printAllAges,
   getFirstHobby,
+  infoOfAged25,
 } = require("./solution");
 
 //    Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
@@ -38,6 +39,13 @@ printAllAges(persons);
 
 //    Create a function to retrieve and display the first hobby of each individual in the dataset.
 getFirstHobby(persons);
-getFirstHobby([{}]);
-getFirstHobby(undefined);
-getFirstHobby();
+// getFirstHobby([{}]);
+// getFirstHobby(undefined);
+// getFirstHobby();
+
+//    Write a function that accesses and prints the names and email addresses of individuals aged 25.
+infoOfAged25(persons);
+// infoOfAged25([{ name: "Mark", age: 25 }]);
+// infoOfAged25([{ age: 25 }]);
+// infoOfAged25([]);
+// infoOfAged25();

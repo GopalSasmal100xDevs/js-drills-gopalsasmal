@@ -91,6 +91,21 @@ function getFirstHobby(persons) {
 }
 
 //    Write a function that accesses and prints the names and email addresses of individuals aged 25.
+function infoOfAged25(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Invalid arugment");
+    return;
+  }
+
+  persons.forEach((person) => {
+    const { age, name, email } = person;
+    if (age && age === 25 && name && email) {
+      console.log(
+        `${person.name}'s email address is ${person.email}, who's age is 25`
+      );
+    }
+  });
+}
 
 //    Implement a loop to access and log the city and country of each individual in the dataset.
 
@@ -101,4 +116,5 @@ module.exports = {
   logTheIndexedPerson,
   printAllAges,
   getFirstHobby,
+  infoOfAged25,
 };
