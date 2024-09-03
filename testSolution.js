@@ -5,6 +5,7 @@ const {
   checkIsStudentLiveInAustralia,
   logTheIndexedPerson,
   printAllAges,
+  getFirstHobby,
 } = require("./solution");
 
 //    Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
@@ -34,3 +35,9 @@ logTheIndexedPerson(persons, 3);
 printAllAges(persons);
 // printAllAges([]);
 // printAllAges(undefined);
+
+//    Create a function to retrieve and display the first hobby of each individual in the dataset.
+getFirstHobby(persons);
+getFirstHobby([{}]);
+getFirstHobby(undefined);
+getFirstHobby();
