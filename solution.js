@@ -68,12 +68,27 @@ function printAllAges(persons) {
     return;
   }
 
-  persons.forEach((person) => {
-    console.log(`${person.name} is ${person.age} years old`);
-  });
+  for (let index = 0; index < persons.length; index++) {
+    console.log(`${persons[index].name} is ${persons[index].age} years old`);
+  }
 }
 
 //    Create a function to retrieve and display the first hobby of each individual in the dataset.
+function getFirstHobby(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Argument is not valid");
+    return;
+  }
+  for (let index = 0; index < persons.length; index++) {
+    if (
+      persons[index].hasOwnProperty("hobbies") &&
+      persons[index].hobbies.length > 0
+    )
+      console.log(
+        `${persons[index].name} first hobby is ${persons[index].hobbies[0]}`
+      );
+  }
+}
 
 //    Write a function that accesses and prints the names and email addresses of individuals aged 25.
 
@@ -85,4 +100,5 @@ module.exports = {
   checkIsStudentLiveInAustralia,
   logTheIndexedPerson,
   printAllAges,
+  getFirstHobby,
 };
