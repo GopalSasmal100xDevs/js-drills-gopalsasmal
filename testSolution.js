@@ -54,4 +54,4 @@ infoOfAged25(persons);
 //    Implement a loop to access and log the city and country of each individual in the dataset.
 printCityAndCountry(persons);
 // printCityAndCountry();
-// printCityAndCountry([{}]);
+printCityAndCountry([{}]);

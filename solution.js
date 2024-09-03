@@ -116,7 +116,8 @@ function printCityAndCountry(persons) {
 
   for (let index = 0; index < persons.length; index++) {
     const { name, city, country } = persons[index];
-    console.log(`${name} city is ${city} and country is ${country}`);
+    if (city && country)
+      console.log(`${name} city is ${city} and country is ${country}`);
   }
 }
 
