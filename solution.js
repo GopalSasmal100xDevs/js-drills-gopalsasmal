@@ -108,6 +108,17 @@ function infoOfAged25(persons) {
 }
 
 //    Implement a loop to access and log the city and country of each individual in the dataset.
+function printCityAndCountry(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Invalid arguments");
+    return;
+  }
+
+  for (let index = 0; index < persons.length; index++) {
+    const { name, city, country } = persons[index];
+    console.log(`${name} city is ${city} and country is ${country}`);
+  }
+}
 
 module.exports = {
   getAllEmails,
@@ -117,4 +128,5 @@ module.exports = {
   printAllAges,
   getFirstHobby,
   infoOfAged25,
+  printCityAndCountry,
 };

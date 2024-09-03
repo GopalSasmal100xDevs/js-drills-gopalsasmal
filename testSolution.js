@@ -7,6 +7,7 @@ const {
   printAllAges,
   getFirstHobby,
   infoOfAged25,
+  printCityAndCountry,
 } = require("./solution");
 
 //    Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
@@ -49,3 +50,8 @@ infoOfAged25(persons);
 // infoOfAged25([{ age: 25 }]);
 // infoOfAged25([]);
 // infoOfAged25();
+
+//    Implement a loop to access and log the city and country of each individual in the dataset.
+printCityAndCountry(persons);
+// printCityAndCountry();
+// printCityAndCountry([{}]);
