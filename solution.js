@@ -62,6 +62,16 @@ function logTheIndexedPerson(persons, index) {
 }
 
 //    Implement a loop to access and print the ages of all individuals in the dataset.
+function printAllAges(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Argument is not valid");
+    return;
+  }
+
+  persons.forEach((person) => {
+    console.log(`${person.name} is ${person.age} years old`);
+  });
+}
 
 //    Create a function to retrieve and display the first hobby of each individual in the dataset.
 
@@ -74,4 +84,5 @@ module.exports = {
   getHobbiesOfaSpecificAge,
   checkIsStudentLiveInAustralia,
   logTheIndexedPerson,
+  printAllAges,
 };
