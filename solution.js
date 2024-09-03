@@ -29,6 +29,18 @@ function getHobbiesOfaSpecificAge(persons, age) {
 }
 
 //    Create a function that extracts and displays the names of individuals who are students (`isStudent: true`) and live in Australia.
+function checkIsStudentLiveInAustralia(persons) {
+  if (!Array.isArray(persons)) {
+    console.log("Argument is not an array");
+    return;
+  }
+
+  persons.forEach((person) => {
+    if (person.isStudent && person.country === "Australia") {
+      console.log(`${person.name} is a student and live in Australia`);
+    }
+  });
+}
 
 //    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
 
@@ -40,4 +52,8 @@ function getHobbiesOfaSpecificAge(persons, age) {
 
 //    Implement a loop to access and log the city and country of each individual in the dataset.
 
-module.exports = { getAllEmails, getHobbiesOfaSpecificAge };
+module.exports = {
+  getAllEmails,
+  getHobbiesOfaSpecificAge,
+  checkIsStudentLiveInAustralia,
+};
