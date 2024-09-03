@@ -11,14 +11,17 @@ function getAllEmails(persons) {
 function getHobbiesOfaSpecificAge(persons, age) {
   if (!Array.isArray(persons)) {
     console.log("First argument is not an array!"); // return [] when persons is not an array
+    return;
   }
 
-  if (persons.length == 1) {
+  if (persons.length == 0) {
     console.log("Array is empty!");
+    return;
   }
 
   if (!Number.isInteger(age)) {
     console.log("Age is not a number!"); // return [] when age is not a number
+    return;
   }
 
   persons.forEach((person) => {
@@ -43,6 +46,20 @@ function checkIsStudentLiveInAustralia(persons) {
 }
 
 //    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
+function logTheIndexedPerson(persons, index) {
+  if (
+    !Array.isArray(persons) ||
+    !Number.isInteger(index) ||
+    index < 0 ||
+    index >= persons.length
+  ) {
+    console.log("Invalid argument");
+    return;
+  }
+
+  const person = persons[index];
+  console.log(`In index ${index} ${person.name} is present.`);
+}
 
 //    Implement a loop to access and print the ages of all individuals in the dataset.
 
@@ -56,4 +73,5 @@ module.exports = {
   getAllEmails,
   getHobbiesOfaSpecificAge,
   checkIsStudentLiveInAustralia,
+  logTheIndexedPerson,
 };

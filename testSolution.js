@@ -3,6 +3,7 @@ const {
   getAllEmails,
   getHobbiesOfaSpecificAge,
   checkIsStudentLiveInAustralia,
+  logTheIndexedPerson,
 } = require("./solution");
 
 //    Given the dataset of individuals, write a function that accesses and returns the email addresses of all individuals.
@@ -21,3 +22,9 @@ getHobbiesOfaSpecificAge(persons, 30);
 checkIsStudentLiveInAustralia(persons);
 // checkIsStudentLiveInAustralia([]);
 // checkIsStudentLiveInAustralia(undefined);
+
+//    Write a function that accesses and logs the name and city of the individual at the index position 3 in the dataset.
+logTheIndexedPerson(persons, 3);
+logTheIndexedPerson(persons, 20);
+logTheIndexedPerson(persons, -1);
+logTheIndexedPerson([], 3);
